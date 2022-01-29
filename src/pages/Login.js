@@ -11,12 +11,12 @@ const Login = () => {
     const navigate = useNavigate();
 
     const submit = data => {
-            post('https://news-app-academlo.herokuapp.com/login/', data)
+            post('https://ecommerce-exercise-backend.herokuapp.com/login/', data)
             .then(res => {
                 localStorage.setItem("token", res.data.access);
                 navigate("/shop");
             })
-            .catch(() => setLoginError("Credenciales incorrectas"));
+            .catch((error) => setLoginError(error.response.data.detail));
     }
 
     return (
