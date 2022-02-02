@@ -9,8 +9,12 @@
   height: 100vh;
   margin: 10px auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 15px;
+}
+
+img{
+  width: 150px;
 }
 
